@@ -5,3 +5,21 @@
 기본적으로 Javascript application들의 state(상태)를 관리하는 방법이다.
 React와 많이 사용되면서 유명해졌으나, React에서만 사용하는 라이브러리가 아니다.
 Angular, Vue,js, Vanilla JS등 JS언어내의 여러곳에서 사용가능하다.
+
+
+
+#############################
+### 1.1 Store and Reducer ###
+#############################
+-Redux 설치
+npm i redux
+
+-Store
+Store는 data를 저장하는 곳
+
+-Reducer
+Reducer는 data를 modify해주는 함수로 reducer가 return하는 data는 application에 있는 data가 된다.
+Reducer만이 data를 modify한다.
+
+-CreateStore
+CreateStore는 reducer를 요구한다.
