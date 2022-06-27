@@ -41,3 +41,33 @@ reducer에게 Action을 보내는 방법 => store.dispatch({ type : value });
 -Subscibe
 Subscibe는 store안에 있는 변화를 감지
 ex) store.subscibe(function) --> store안에 변화가 감지되면 func를 실행
+
+
+
+###########################
+### 1.4 Recap Refactor  ###
+###########################
+-reducer
+현재 상태의 application과 함께 불려지는 function(+ with action) return하는 값은 application의 state값이된다.
+
+-action
+reducer와 소통하는 방법으로 ⭐Object⭐여야하고 key 이름은 ⭐type⭐이여야한다.
+
+-dispatch
+reducer에거 action을 보내는 방법
+
+-subscibe
+store의 변화를 감지하면 인자값으로 준 함수를 실행한다.
+
+-switch
+reducer에서 action 값으로 데이터를 처리 할 때
+if else if esle 방식보다 ⭐switch⭐가 자주 쓰인다.
+ex) switch(action.type){
+        case action1:
+            return data
+        case action2:
+            return data
+        default:
+            return data
+    }
+action.type 값을 string으로 바로 쓰기보다는 const variable 변수로 선언해서 사용하면 에러발견에 용이하다.
