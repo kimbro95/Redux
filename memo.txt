@@ -104,3 +104,21 @@ const reducer = (state = [], action) => {
             return state;
     }
 };
+
+
+
+########################
+### 2.3 Delete To Do ###
+########################
+👉 mutating state 대신에 new state object를 리턴해야한다.
+filter()는 테스트 통과한 모든 element들로 새로운 array를 만드다.
+ex)
+const reducer = (state = [], action) => {
+    switch (action.type) {
+        case ADD_TODO:
+            return [{ text: action.text, id: Date.now() }, ...state];
+        case DELETE_TODO:
+            return state.filter(toDo => toDo.id !== action.id);         // state를 mutate하지않기 위해 filter()를 사용
+            return state;
+    }
+};
