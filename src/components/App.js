@@ -1,20 +1,14 @@
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import Detail from "../routes/Detail";
 import Home from "../routes/Home";
 
-function App() {
+const App = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/:id" element={<Detail />}></Route>
-            </Routes>
-        </BrowserRouter>
+        <HashRouter>
+            <Route path="/" exact component={Home}></Route>
+            <Route path="/:id" component={Detail}></Route>
+        </HashRouter>
     );
-}
+};
 
 export default App;

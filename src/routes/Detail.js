@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { deleteToDo } from "../store";
 
 function Detail() {
@@ -8,12 +8,12 @@ function Detail() {
     const toDos = useSelector(state => state);
     const toDo = toDos.find(toDo => toDo.id === parseInt(id));
 
-    const navigate = useNavigate();
+    const history = useHistory();
     const dispatch = useDispatch();
     const handleDeleteToDo = (e) => {
         e.preventDefault();
         dispatch(deleteToDo(id));
-        navigate("/");
+        return history.push("/");
     }
 
     return (
