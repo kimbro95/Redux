@@ -18,7 +18,7 @@ function Home() {
     }
     return (
         <>
-            <h1>To Do</h1>
+            <h1>📝 To Do List</h1>
             <form onSubmit={onSubmit}>
                 <input type="text" value={text} onChange={onChange} />
                 <button>Add</button>
