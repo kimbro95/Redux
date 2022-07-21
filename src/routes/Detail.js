@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { deleteToDo } from "../store";
 
 function Detail() {
-    const id = useParams().id;
+    const id = parseInt(useParams().id);
     const toDos = useSelector(state => state);
     const toDo = toDos.find(toDo => toDo.id === parseInt(id));
 

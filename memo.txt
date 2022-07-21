@@ -136,3 +136,43 @@ Redeux Toolkit은 아래의 단점을 극복하기 위해 나온 툴이다.
 - store 복잡성
 - 유용해지려면 많은 패키지들을 추가해야한다.
 - 많은 보일러플레이트 코드를 요구
+
+
+
+########################
+### 4.1 createAction ###
+########################
+-createAction
+Redux action type 및 creator를 정의하기 위한 helper함수이다.
+
+ex)
+import { createAction } from '@reduxjs/toolkit'
+
+const increment = createAction('counter/increment');
+let action = increment(3) // { type: 'counter/increment', payload: 3 }
+
+- 변경된 store
+const ADD = "ADD";
+const DELETE = "DELETE";
+
+export const addToDo = text => {
+    return {
+        type: ADD,
+        text
+    };
+};
+
+export const deleteToDo = id => {
+    return {
+        type: DELETE,
+        id: parseInt(id)
+    };
+};
+
+            👇👇👇👇
+
+export const addToDo = createAction("ADD");
+export const deleteToDo = createAction("DELETE");
+
+참조
+https://redux-toolkit.js.org/api/createAction
