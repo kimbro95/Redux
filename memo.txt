@@ -219,3 +219,21 @@ const reducer = createReducer(currentState, {
         return state;
     }
 });
+
+
+
+##########################
+### 4.3 configureStore ###
+##########################
+-Redux DevTools(구글 확장프로그램)
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ko
+
+-configureStore
+더 나은 개발 경험을 위해 store 설정에 몇몇 기본 값을 추가한다.
+
+ex) 
+import { configureStore } from '@reduxjs/toolkit'
+
+const store = configureStore({ reducer });
+
+참조https://redux-toolkit.js.org/api/configureStore
