@@ -237,3 +237,15 @@ import { configureStore } from '@reduxjs/toolkit'
 const store = configureStore({ reducer });
 
 참조https://redux-toolkit.js.org/api/configureStore
+
+
+
+#######################
+### 4.4 createSlice ###
+#######################
+-createSlice
+초기 state, reducer 함수의 객체 "slice 이름"을 받아 reducer 및 state에 해당하는 ation creator와 action type을 자동으로 생성하는 함수이다.
+내부적으로는 createAction 및 createReducer를 사용하므로 immer를 사용하여 "mutating" 불변 업데이트를 작성할 수 도 있다.
+
+참조
+https://redux-toolkit.js.org/api/createSlice

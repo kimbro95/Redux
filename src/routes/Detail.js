@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
-import { deleteToDo } from "../store";
+import { remove } from "../store";
 
 function Detail() {
     const id = parseInt(useParams().id);
@@ -12,7 +12,7 @@ function Detail() {
     const dispatch = useDispatch();
     const handleDeleteToDo = (e) => {
         e.preventDefault();
-        dispatch(deleteToDo(id));
+        dispatch(remove(id));
         return history.push("/");
     }
 
